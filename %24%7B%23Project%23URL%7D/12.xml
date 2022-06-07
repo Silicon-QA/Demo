@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="12" path="/user/edit/12" id="dc0e7926-2511-4e73-b7f7-67334b6303f3" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="dc0e7926-2511-4e73-b7f7-67334b6303f3fileName">12</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="12" id="47bd437e-b023-4ed3-9837-a26f90b3ce4f" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Authorization</con:name>
+        <con:value>${#Project#token}</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>Content-Type</con:name>
+        <con:value>application/json</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="UPDATE : {{URL}}/user/edit/{id}" id="1e7c397a-a4f4-4722-adb8-b7001f97a203" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>${#Project#URL}</con:endpoint>
+      <con:request>{
+    "full_name":"dev test",
+    "city":1,
+    "role":3,
+    "permissions":[],
+    "mobile_number":"2535689562",
+    "id":null
+}</con:request>
+      <con:parameters>
+        <con:entry key="Authorization" value="${#Project#token}"/>
+        <con:entry key="Content-Type" value="application/json"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+        <con:entry>Content-Type</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

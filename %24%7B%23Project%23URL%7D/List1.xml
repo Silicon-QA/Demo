@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="List" path="/permission/list" id="aa3c0ed2-1063-4eab-b0fe-914b43e102cb" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="aa3c0ed2-1063-4eab-b0fe-914b43e102cbfileName">List1</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="List" id="f90fda7f-2ce8-4e91-8248-95c0fe194845" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Authorization</con:name>
+        <con:value>${#Project#token}</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>X-localization</con:name>
+        <con:value>hi</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="Role Permission List" id="94f2230a-512a-4dfd-9555-a3eefa4ac068" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>${#Project#URL}</con:endpoint>
+      <con:request>{
+    "role_id":11
+}</con:request>
+      <con:parameters>
+        <con:entry key="Authorization" value="${#Project#token}"/>
+        <con:entry key="X-localization" value="hi"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+        <con:entry>X-localization</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+  <con:method name="List 2" id="e853c8f1-5525-4a82-8798-a621e4459f95" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Authorization</con:name>
+        <con:value>${#Project#token}</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>Content-Type</con:name>
+        <con:value>application/json</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>Access-Control-Allow-Origin</con:name>
+        <con:value>http://localhost:8006</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="Permission List : {{URL}}/permission/list" id="315cd03d-52a7-4de0-a339-6c55d9b9ce6c" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>${#Project#URL}</con:endpoint>
+      <con:request>{
+   "user_id":null,
+   "role_id":"5"
+}</con:request>
+      <con:parameters>
+        <con:entry key="Authorization" value="${#Project#token}"/>
+        <con:entry key="Access-Control-Allow-Origin" value="http://localhost:8006"/>
+        <con:entry key="Content-Type" value="application/json"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+        <con:entry>Content-Type</con:entry>
+        <con:entry>Access-Control-Allow-Origin</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

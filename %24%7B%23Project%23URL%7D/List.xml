@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="List" path="/role/list" id="92f5525a-c158-4f44-b970-0c8688ce33ff" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="92f5525a-c158-4f44-b970-0c8688ce33fffileName">List</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="List" id="6247aa74-3d14-43a5-84e4-e410df406d48" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Authorization</con:name>
+        <con:value>${#Project#token}</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>Content-Type</con:name>
+        <con:value>application/json</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="LIST : {{URL}}/role/list" id="d524d8a0-2b03-4a0b-806e-e34f542c00e5" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>${#Project#URL}</con:endpoint>
+      <con:request>{
+   "per_page":500,
+   "page":1
+}</con:request>
+      <con:parameters>
+        <con:entry key="Authorization" value="${#Project#token}"/>
+        <con:entry key="Content-Type" value="application/json"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+        <con:entry>Content-Type</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

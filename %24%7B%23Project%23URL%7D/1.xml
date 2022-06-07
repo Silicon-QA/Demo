@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="1" path="/user/1" id="5a23c782-f862-4029-86c4-af47354fb6ec" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5a23c782-f862-4029-86c4-af47354fb6ecfileName">1</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="1" id="84789503-4f32-41c4-9634-bac645387966" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Authorization</con:name>
+        <con:value>${#Project#token}</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>Content-Type</con:name>
+        <con:value>application/json</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="READ : {{URL}}/user/{id}" id="21bcbe06-4f53-4adb-b794-0d330d98957e" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>${#Project#URL}</con:endpoint>
+      <con:parameters>
+        <con:entry key="Authorization" value="${#Project#token}"/>
+        <con:entry key="Content-Type" value="application/json"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+        <con:entry>Content-Type</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

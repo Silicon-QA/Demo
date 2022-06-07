@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Add" path="/user/add" id="a25cba1e-f72d-4562-aaf2-b2a149d17494" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a25cba1e-f72d-4562-aaf2-b2a149d17494fileName">Add1</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Add" id="6c53d165-5750-4ba7-a81f-39dcb18f5d34" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Authorization</con:name>
+        <con:value>${#Project#token}</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>Content-Type</con:name>
+        <con:value>application/json</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="ADD : {{URL}}/user/add" id="915be9b4-e447-4e4b-9957-7be600b03efc" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>${#Project#URL}</con:endpoint>
+      <con:request>{
+    "full_name":"dev test",
+    "city":"1",
+    "role":"24",
+    "permissions":[{"1":[1,2,3]}],
+    "mobile_number":"9821352562",
+    "email":"devtest@yopmail.com"
+}</con:request>
+      <con:parameters>
+        <con:entry key="Authorization" value="${#Project#token}"/>
+        <con:entry key="Content-Type" value="application/json"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>Authorization</con:entry>
+        <con:entry>Content-Type</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

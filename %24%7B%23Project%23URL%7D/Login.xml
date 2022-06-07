@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Login" path="/login" id="efa5baa2-370c-4a66-90d1-6602a7f45591" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="efa5baa2-370c-4a66-90d1-6602a7f45591fileName">Login</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Login" id="8a6b23cd-1bfb-4cc3-9066-54ff1074c68b" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>Content-Type</con:name>
+        <con:value>application/json</con:value>
+        <con:style>HEADER</con:style>
+        <con:default/>
+        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+    </con:parameters>
+    <con:request name="Login" id="8f0df779-bb17-4b9a-adfb-2c6761006b4e" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>${#Project#URL}</con:endpoint>
+      <con:request>{
+    "email":"superadmin@wastemanage.com",
+    "password":"WasteManage#123"
+}</con:request>
+      <con:parameters>
+        <con:entry key="Content-Type" value="application/json"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>Content-Type</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>
