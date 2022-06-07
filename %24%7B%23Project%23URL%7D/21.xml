@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="21" path="/user/restore/21" id="5b5e22f0-8595-4b09-930b-29a216653d33" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="21" path="/user/restore/21" id="5b5e22f0-8595-4b09-930b-29a216653d33" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="5b5e22f0-8595-4b09-930b-29a216653d33fileName">21</con:setting>
   </con:settings>
@@ -12,21 +12,25 @@
         <con:value>${#Project#token}</con:value>
         <con:style>HEADER</con:style>
         <con:default/>
-        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
       <con:parameter>
         <con:name>Content-Type</con:name>
         <con:value>application/json</con:value>
         <con:style>HEADER</con:style>
         <con:default/>
-        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
     <con:request name="RESTORE : {{URL}}/user/restore/{id}" id="8e24da14-d451-4c5d-9ff0-80781f52d9d2" mediaType="application/json">
       <con:settings/>
       <con:endpoint>${#Project#URL}</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters>
         <con:entry key="Authorization" value="${#Project#token}"/>
         <con:entry key="Content-Type" value="application/json"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="Login" path="/login" id="efa5baa2-370c-4a66-90d1-6602a7f45591" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="Login" path="/login" id="efa5baa2-370c-4a66-90d1-6602a7f45591" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="efa5baa2-370c-4a66-90d1-6602a7f45591fileName">Login</con:setting>
   </con:settings>
@@ -12,8 +12,8 @@
         <con:value>application/json</con:value>
         <con:style>HEADER</con:style>
         <con:default/>
-        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
     <con:request name="Login" id="8f0df779-bb17-4b9a-adfb-2c6761006b4e" mediaType="application/json">
@@ -23,6 +23,10 @@
     "email":"superadmin@wastemanage.com",
     "password":"WasteManage#123"
 }</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters>
         <con:entry key="Content-Type" value="application/json"/>
       </con:parameters>

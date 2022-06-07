@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="63" path="/user/delete/63" id="16b46283-92c3-4337-ad86-0102389c1a45" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="63" path="/user/delete/63" id="16b46283-92c3-4337-ad86-0102389c1a45" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="16b46283-92c3-4337-ad86-0102389c1a45fileName">63</con:setting>
   </con:settings>
@@ -12,21 +12,25 @@
         <con:value>${#Project#token}</con:value>
         <con:style>HEADER</con:style>
         <con:default/>
-        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
       <con:parameter>
         <con:name>Content-Type</con:name>
         <con:value>application/json</con:value>
         <con:style>HEADER</con:style>
         <con:default/>
-        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
     <con:request name="DELETE : {{URL}}/user/delete/{id}" id="91e4ad7d-0608-413d-98e5-d93584b991be" mediaType="application/json">
       <con:settings/>
       <con:endpoint>${#Project#URL}</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters>
         <con:entry key="Authorization" value="${#Project#token}"/>
         <con:entry key="Content-Type" value="application/json"/>

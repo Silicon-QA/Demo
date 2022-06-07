@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="Logout" path="/logout" id="e3ae609b-3cf9-40f6-a26d-4981c93a5b92" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="Logout" path="/logout" id="e3ae609b-3cf9-40f6-a26d-4981c93a5b92" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="e3ae609b-3cf9-40f6-a26d-4981c93a5b92fileName">Logout</con:setting>
   </con:settings>
@@ -12,29 +12,33 @@
         <con:value>${#Project#token}</con:value>
         <con:style>HEADER</con:style>
         <con:default/>
-        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
       <con:parameter>
         <con:name>Content-Type</con:name>
         <con:value>application/json</con:value>
         <con:style>HEADER</con:style>
         <con:default/>
-        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
       <con:parameter>
         <con:name>Accept</con:name>
         <con:value>application/json</con:value>
         <con:style>HEADER</con:style>
         <con:default/>
-        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
     <con:request name="LOGOUT : {{URL}}/logout" id="27bc73a2-e2b9-421b-bd0b-83b0f15c1f38" mediaType="application/json">
       <con:settings/>
       <con:endpoint>${#Project#URL}</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
       <con:parameters>
         <con:entry key="Authorization" value="${#Project#token}"/>
         <con:entry key="Accept" value="application/json"/>

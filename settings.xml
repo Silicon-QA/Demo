@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="27122a52-d09f-431d-b38f-dbd0d90e85f8" created="3.40.0" activeEnvironment="Default environment" name="Users (ADMIN)" compositeProjectFormat="1.3" updated="3.40.0" xmlns:con="http://eviware.com/soapui/config">
-  <con:settings/>
+<con:soapui-project id="27122a52-d09f-431d-b38f-dbd0d90e85f8" created="3.40.0" activeEnvironment="Default environment" name="Users (ADMIN)" compositeProjectFormat="1.3" updated="3.40.0" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="27122a52-d09f-431d-b38f-dbd0d90e85f8fileName">Git Demo project with ready API</con:setting>
+  </con:settings>
   <con:properties>
     <con:property>
       <con:name>URL</con:name>
